@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,800;1,400&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+.brand_start {
+    font-weight: bold;
+    color: #EC4043;
+    font-size: 27px;
+}
+
+.brand_end {
+    font-weight: lighter;
+    color: #F19F1C;
+}
