@@ -3,7 +3,17 @@
     <div class="container mt-4">
       <h1>Effectuer une recherche</h1>
       <hr>
-      <Loader v-if="loading"/>
+      <div v-if="loading">
+        <div class="alert alert-info">
+          <Loader v-if="loading"/>
+          Veuillez patienter pendant que nous générons votre fichier
+        </div>
+      </div>
+      <div class="col-12 mt-2 mb-2" v-if="organicResults">
+        <download-csv class="btn btn-secondary" :data="organicResults" name="report.csv">
+          Télécharger le rapport
+        </download-csv>
+      </div>
       <FormulateForm v-model="formData" @submit="handleSubmit" name="scrapperForm" class="row">
         <div class="col-12 col-md-6">
           <FormulateInput label="Requête à effectuer"
@@ -31,11 +41,6 @@
                           :disabled="loading"/>
         </div>
       </FormulateForm>
-      <div class="col-12 mt-2 mb-2" v-if="organicResults">
-        <download-csv class="btn btn-secondary" :data="organicResults" name="report.csv">
-          Télécharger le rapport
-        </download-csv>
-      </div>
     </div>
   </div>
 </template>

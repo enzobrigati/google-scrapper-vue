@@ -22,7 +22,7 @@
     <router-view/>
     <footer class="text-center mt-4">
       <img src="@/assets/image/logo-full.svg" height="80px"/>
-      <p>© Copyright Google-Scrapper - Créé par <a href="https://deob.fr" target="_blank">Enzo Brigati</a> - Tous droits réservés</p>
+      <p>© Copyright Google-Scrapper - Créé par <a href="https://deob.fr" target="_blank">Enzo Brigati</a> - Tous droits réservés - <router-link class="text-primary" :to="{name: 'changelog'}">Changelog</router-link></p>
     </footer>
   </div>
 </template>
