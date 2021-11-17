@@ -86,25 +86,18 @@ export default {
     handleSubmit: async function() {
       this.loading = true;
       this.notFormattedQuery = this.query;
-      let parsedQuery = new URLSearchParams({
-        query: this.query,
-      });
-      let url =
-        "https://rt.serpmaster.com/?access_token=" +
-        process.env.VUE_APP_SERPSTACK_APIKEY +
-        "&" +
-        parsedQuery +
-        "&scrapper=google_search&geo=France&parse=true&domain=fr&locale=fr-fr&device=desktop&num=" +
-        this.resultNumber;
       await axios
-        .get(url)
+        .get(
+          "https://lab.deob.fr/g-scrapper-api/request.php?query=" +
+            this.query +
+            "&num=" +
+            this.resultNumber
+        )
         .then((res) => {
-          this.organicResults = res.data.results.content.results.organic;
+          this.organicResults = res.data.results[0].content.results.organic;
           this.query = null;
-          this.notFormattedQuery = null;
-          console.log(res);
         })
-        .catch((e) => console.warn(e));
+        .catch((e) => console.warn(e.response));
       this.loading = false;
     },
     addQueryComponent: function() {},
