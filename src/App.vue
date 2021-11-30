@@ -21,7 +21,7 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <router-link class="nav-link" :to="{ name: 'home' }"
-                >Scrapper</router-link
+              >MultiQuery</router-link
               >
             </li>
           </ul>
@@ -33,7 +33,7 @@
       <img src="@/assets/image/logo-full.svg" height="80px" />
       <p>
         © Copyright Google-Scrapper -
-        <a href="https://deob.fr" target="_blank">DEOB</a> - Tous droits
+        <a href="https://avenanceagency.com" target="_blank">Avenance Agency</a> - Tous droits
         réservés -
         <router-link class="text-primary" :to="{ name: 'changelog' }"
           >Changelog</router-link
@@ -44,6 +44,9 @@
 </template>
 
 <style>
+.cursor-pointer {
+  cursor: pointer;
+}
 .router-link-exact-active {
   color: white !important;
 }

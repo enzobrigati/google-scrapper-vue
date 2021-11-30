@@ -100,7 +100,6 @@ export default {
         .catch((e) => console.warn(e.response));
       this.loading = false;
     },
-    addQueryComponent: function() {},
   },
 };
 </script>

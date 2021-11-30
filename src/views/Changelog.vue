@@ -3,6 +3,26 @@
     <div class="container mt-4">
       <h1>Changelog</h1>
       <hr />
+      <h3 class="font-weight-bold">0.4.1 (30/11/21)</h3>
+      <ul>
+        <li>Ajout du support pour excel <span class="badge bg-danger text-white">bug fix</span></li>
+        <li>Retrait du mode single search <span class="badge badge-warning text-white">edit</span></li>
+        <li>
+          Mise à jour du router afin de prendre en compte les 404 <span
+            class="badge bg-warning text-white"
+        >edit</span
+        >
+        </li>
+      </ul>
+      <h3 class="font-weight-bold">0.4 (29/11/21)</h3>
+      <ul>
+        <li>
+          Ajout du multi-query <span
+            class="badge bg-success text-white"
+        >feature</span
+        >
+        </li>
+      </ul>
       <h3 class="font-weight-bold">0.3 (17/11/21)</h3>
       <ul>
         <li>
